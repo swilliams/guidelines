@@ -1,9 +1,9 @@
 version: "3"
 services:
   site:
-    build: .
+    image: bretfisher/jekyll-serve
     command: bundle exec jekyll server --config _local.yml --host '0.0.0.0'
     volumes:
-      - ./docs:/srv/jekyll
+      - ./docs:/site
     ports:
       - 4000:4000
